@@ -10,16 +10,11 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (dates, idx) => {
   let result = [];
-  if (idx !== undefined) {
-    dates.forEach((date) => {
-      result.push((Date.parse(date)/1000).toString())
-    })
-  } else {
-    for (let counter = 1; counter < dates.length; counter++) {
-      result.push(Date.parse(dates[counter]).toString())
-    }
-    return list.sort().join('-')
-  }
+  dates.forEach((date) => {
+    result.push((Date.parse(date) / 1000).toString());
+  });
+
+  return typeof idx === "number" ? result[idx] : result.sort().join("-");
 };
 
 // ! JANGAN DIMODIFIKASI
