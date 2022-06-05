@@ -18,6 +18,7 @@ const createDate = (dates, idx) => {
     for (let counter = 1; counter < dates.length; counter++) {
       result.push(Date.parse(dates[counter]).toString())
     }
+    return list.sort().join('-')
   }
 };
 
